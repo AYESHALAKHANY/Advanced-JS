@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         Suppose You have an array of object
+// var itemsArray = [
+// {name:”juice”,price:”50”, quantity:”3”},
+// {name:”cookie”,price:”30”, quantity:”9”},
+// {name:”shirt”,price:”880”, quantity:”1”},
+// {name:”pen”,price:”100”, quantity:”2”}];
+// Calculate total price of each item and all items;
+
+    var itemsArray = [
+  { name: "juice", price: 50, quantity: 3 },
+  { name: "cookie", price: 30, quantity: 9 },
+  { name: "shirt", price: 880, quantity: 1 },
+  { name: "pen", price: 100, quantity: 2 }
+    ]
+
+    let totalPriceOfAllItems = 0;
+
+    itemsArray.forEach(item => {
+      let totalItemPrice = item.price * item.quantity;
+      console.log(`Total price of ${item.name}: ${totalItemPrice}`);
+      totalPriceOfAllItems +=totalItemPrice;
+    });
+
+    console.log(`Total price of all items: ${totalPriceOfAllItems}`);
+    
+//     2. Create an object with properties name, email, password, age,
+// gender, city, country.
+
+   let profile = {
+    name:"Ayesha",
+    email:"lakhanyayesha@gmail.com",
+    password:"ayesha12",
+    age:17,
+    gender:"female",
+    city:"Karachi",
+    country:"Pakistan"
+   };
+
+   // Check if age and country properties exist in object or not.
+     console.log( "age" in profile );// true,because exist in object 
+    console.log( "country" in profile);// true,because exist in object
+    
+// Also check firstName and lastName properties in object.
+   console.log("firstName" in profile);// false,because doesn't exist 
+   console.log("lastName" in profile);// false,because doesn't exist 
+
+  //  3. Create a constructor function with some properties.
+      function Mobile(Name,Model,Brand,IOS) {
+        this.Name = Name;
+        this.Model= Model;
+        this.Brand=Brand;
+        this.IOS=IOS;
+      }
+      // Now create multiple records using the constructor.
+       let mobile1 = new Mobile("iphone","11 pro","Apple",17.5)
+       let mobile2 = new Mobile("iphone","12 pro","Apple",17.6)
+       let mobile3 = new Mobile("iphone","13 pro","Apple",18.0)
+       let mobile4 = new Mobile("iphone","14 pro","Apple",18.1)
+
+       console.log(mobile1);
+       console.log(mobile2);
+       console.log(mobile3);
+       console.log(mobile4);
+       
+    </script>
+</body>
+</html>
